@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resina Composta Essential — Figueiredo Academy</title>
+  <meta name="description" content="Imersão presencial de 2 dias em Ipatinga/MG para acadêmicos e recém-formados. Domine resinas anteriores com protocolo simples, previsível e lucrativo." />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Resina Composta Essential — Figueiredo Academy" />
+  <meta property="og:description" content="Imersão de 2 dias para acadêmicos e recém-formados. Protocolo à prova de falhas para resinas anteriores." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#08080a',
+            foreground: '#ffffff',
+            'muted-foreground': '#a0a0a0',
+            gold: '#ffb800',
+            'gold-dark': '#d4af37',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS para Estética Dark Gold & Carrossel Mobile -->
+  <style>
+    body {
+      background-color: #08080a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #ffd76a 0%, #ffb800 50%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-strong {
+      background: rgba(18, 18, 20, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .gold-border {
+      border: 1px solid rgba(255, 184, 0, 0.3);
+    }
+
+    .gold-glow {
+      box-shadow: 0 0 50px rgba(255, 184, 0, 0.15);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #ffd76a 0%, #d4af37 100%);
+      color: #0a0a0c;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(255, 184, 0, 0.25);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(255, 184, 0, 0.45);
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+    }
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .hairline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    }
+
+    /* ESCONDER SCROLLBAR NO CARROSSEL MOBILE */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen overflow-x-hidden antialiased bg-background">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-4">
+      <div class="glass rounded-full px-5 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <span class="h-8 w-8 rounded-full bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] font-black text-sm">F</span>
+          <span class="hidden sm:block font-display font-bold tracking-tight text-sm">
+            Figueiredo <span class="gold-text">Academy</span>
+          </span>
+        </a>
+        <a href="#oferta" class="btn-gold rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm uppercase tracking-wider transition">
+          Garantir vaga
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[100svh] flex items-center pt-28 pb-16">
+    <div class="absolute inset-0 -z-10">
+      <img
+        src="assets/hero-fachada.png"
+        alt="Fachada do Instituto Figueiredo à noite"
+        class="h-full w-full object-cover opacity-35"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,184,0,0.18),transparent_55%)]"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.15fr_1fr] gap-12 items-center w-full">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs uppercase tracking-[0.25em] text-gold">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Imersão presencial · Ipatinga/MG
+        </div>
+        <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05]">
+          Domine <span class="gold-text">Resinas Anteriores</span> com Segurança.
+        </h1>
+        <p class="mt-4 text-lg sm:text-xl text-muted-foreground">
+          Curso sob medida para recém-formados e acadêmicos.
+        </p>
+        <p class="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+          A imersão presencial de <strong class="text-foreground">2 dias</strong> criada para quem quer perder o medo da clínica e executar um protocolo <span class="gold-text font-semibold">simples, previsível e lucrativo</span>. Sem investir uma fortuna em materiais.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a href="#oferta" class="btn-gold inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm sm:text-base uppercase tracking-wider transition">
+            QUERO GARANTIR MINHA VAGA NO ESSENTIAL
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+        <div class="mt-10 grid grid-cols-3 gap-4 max-w-lg">
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-xl sm:text-2xl font-bold gold-text">2 dias</div>
+            <div class="text-[11px] uppercase tracking-widest text-muted-foreground mt-1">Imersão</div>
+          </div>
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-xl sm:text-2xl font-bold gold-text">20</div>
+            <div class="text-[11px] uppercase tracking-widest text-muted-foreground mt-1">Vagas</div>
+          </div>
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-xl sm:text-2xl font-bold gold-text">100%</div>
+            <div class="text-[11px] uppercase tracking-widest text-muted-foreground mt-1">Hands-on</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative gold-glow">
+        <div class="absolute inset-0 -m-6 rounded-[2rem] bg-[radial-gradient(circle_at_center,rgba(255,184,0,0.35),transparent_65%)] blur-2xl"></div>
+        <div class="relative rounded-[2rem] overflow-hidden glass-strong">
+          <img
+            src="assets/Breno-ramon-1.png"
+            alt="Drs. Breno e Ramon Figueiredo"
+            class="w-full h-auto object-cover"
+          />
+          <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+            <div class="text-xs uppercase tracking-[0.3em] text-gold">Seus mentores</div>
+            <div class="text-lg font-bold mt-1">Drs. Breno & Ramon Figueiredo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS (CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Reconhece isso?</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Seja honesto: você se identifica com <span class="gold-text">alguma dessas situações?</span>
+        </h2>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop -->
+      <div class="mt-14 flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 sm:pb-0">
+        <div class="glass rounded-2xl p-6 hover:border-gold/30 transition group shrink-0 w-[82vw] sm:w-auto snap-center">
+          <div class="h-11 w-11 rounded-xl bg-gold/10 border border-gold/20 grid place-items-center mb-4 group-hover:bg-gold/20 transition">
+            <i data-lucide="heart-crack" class="h-5 w-5 text-gold"></i>
+          </div>
+          <p class="text-sm sm:text-base text-foreground/90 leading-relaxed">Ansiedade e insegurança ao fazer restauração em dente anterior.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-6 hover:border-gold/30 transition group shrink-0 w-[82vw] sm:w-auto snap-center">
+          <div class="h-11 w-11 rounded-xl bg-gold/10 border border-gold/20 grid place-items-center mb-4 group-hover:bg-gold/20 transition">
+            <i data-lucide="wallet" class="h-5 w-5 text-gold"></i>
+          </div>
+          <p class="text-sm sm:text-base text-foreground/90 leading-relaxed">Dificuldade de investir de 2 a 3 mil reais em lista de materiais no momento.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-6 hover:border-gold/30 transition group shrink-0 w-[82vw] sm:w-auto snap-center">
+          <div class="h-11 w-11 rounded-xl bg-gold/10 border border-gold/20 grid place-items-center mb-4 group-hover:bg-gold/20 transition">
+            <i data-lucide="graduation-cap" class="h-5 w-5 text-gold"></i>
+          </div>
+          <p class="text-sm sm:text-base text-foreground/90 leading-relaxed">Sensação de que a faculdade não deu prática suficiente para resina natural.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-6 hover:border-gold/30 transition group shrink-0 w-[82vw] sm:w-auto snap-center">
+          <div class="h-11 w-11 rounded-xl bg-gold/10 border border-gold/20 grid place-items-center mb-4 group-hover:bg-gold/20 transition">
+            <i data-lucide="smile" class="h-5 w-5 text-gold"></i>
+          </div>
+          <p class="text-sm sm:text-base text-foreground/90 leading-relaxed">Medo de deixar o dente parecendo um "chiclete" sem forma ou textura.</p>
+        </div>
+      </div>
+
+      <p class="mt-12 text-center text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        Nós sabemos como é. Todo grande dentista já passou por essa fase. <span class="text-foreground">O erro é tentar começar pelas técnicas ultracomplexas</span> antes de dominar o essencial.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOLUTION (CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.08),transparent_60%)]"></div>
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">O curso</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Apresentamos o curso <span class="gold-text">Resina Composta Essential</span>
+        </h2>
+        <p class="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          O Instituto Figueiredo desenhou este treinamento para ser a sua porta de entrada no mercado. Em 2 dias de imersão presencial em Ipatinga/MG, nós pegamos na sua mão e te ensinamos o protocolo à prova de falhas que usamos na nossa clínica.
+        </p>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop -->
+      <div class="mt-16 flex md:grid md:grid-cols-3 gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+        <div class="glass-strong gold-border rounded-3xl p-8 relative overflow-hidden shrink-0 w-[85vw] md:w-auto snap-center">
+          <div class="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gold/10 blur-2xl"></div>
+          <div class="relative">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] mb-5">
+              <i data-lucide="shield-check" class="h-5 w-5" stroke-width="2.5"></i>
+            </div>
+            <div class="text-xs uppercase tracking-[0.25em] text-gold mb-2">01</div>
+            <h3 class="text-xl font-bold mb-2">Protocolo Simplificado</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">Estratificação de dente natural e belo com o material certo.</p>
+          </div>
+        </div>
+
+        <div class="glass-strong gold-border rounded-3xl p-8 relative overflow-hidden shrink-0 w-[85vw] md:w-auto snap-center">
+          <div class="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gold/10 blur-2xl"></div>
+          <div class="relative">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] mb-5">
+              <i data-lucide="palette" class="h-5 w-5" stroke-width="2.5"></i>
+            </div>
+            <div class="text-xs uppercase tracking-[0.25em] text-gold mb-2">02</div>
+            <h3 class="text-xl font-bold mb-2">Anatomia Direta</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">Escultura rápida sem perder horas na cadeira.</p>
+          </div>
+        </div>
+
+        <div class="glass-strong gold-border rounded-3xl p-8 relative overflow-hidden shrink-0 w-[85vw] md:w-auto snap-center">
+          <div class="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gold/10 blur-2xl"></div>
+          <div class="relative">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] mb-5">
+              <i data-lucide="sparkles" class="h-5 w-5" stroke-width="2.5"></i>
+            </div>
+            <div class="text-xs uppercase tracking-[0.25em] text-gold mb-2">03</div>
+            <h3 class="text-xl font-bold mb-2">Acabamento & Polimento</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">O segredo para o brilho duradouro em qualquer caso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER (CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Resultados de alunos</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Eles tinham as mesmas inseguranças que você. <span class="gold-text">Olha o que estão fazendo hoje:</span>
+        </h2>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop -->
+      <div class="mt-14 flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 sm:pb-0">
+        <div class="group shrink-0 w-[80vw] sm:w-auto snap-center">
+          <div class="relative rounded-2xl overflow-hidden gold-border p-1">
+            <div class="rounded-xl overflow-hidden relative aspect-[4/5]">
+              <img src="assets/caso-1.jpeg" alt="Caso Clínico 1" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+              <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="text-[10px] uppercase tracking-widest text-gold">Antes → Depois</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group shrink-0 w-[80vw] sm:w-auto snap-center">
+          <div class="relative rounded-2xl overflow-hidden gold-border p-1">
+            <div class="rounded-xl overflow-hidden relative aspect-[4/5]">
+              <img src="assets/caso-2.jpeg" alt="Caso Clínico 2" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+              <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="text-[10px] uppercase tracking-widest text-gold">Antes → Depois</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group shrink-0 w-[80vw] sm:w-auto snap-center">
+          <div class="relative rounded-2xl overflow-hidden gold-border p-1">
+            <div class="rounded-xl overflow-hidden relative aspect-[4/5]">
+              <img src="assets/caso-3.jpeg" alt="Caso Clínico 3" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+              <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="text-[10px] uppercase tracking-widest text-gold">Antes → Depois</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group shrink-0 w-[80vw] sm:w-auto snap-center">
+          <div class="relative rounded-2xl overflow-hidden gold-border p-1">
+            <div class="rounded-xl overflow-hidden relative aspect-[4/5]">
+              <img src="assets/caso-4.jpeg" alt="Caso Clínico 4" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" />
+              <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="text-[10px] uppercase tracking-widest text-gold">Antes → Depois</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 flex justify-center">
+        <a href="#oferta" class="btn-gold inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm sm:text-base uppercase tracking-wider transition">
+          QUERO ENTREGAR RESULTADOS COMO ESSES
+          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASS EXPERIENCE (VÍDEO YOUTUBE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative">
+    <div class="mx-auto max-w-5xl">
+      <div class="text-center mx-auto max-w-3xl mb-12">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Nossas turmas</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Sinta a <span class="gold-text">atmosfera</span> da nossa imersão
+        </h2>
+      </div>
+
+      <!-- Player de Vídeo Responsivo 16:9 -->
+      <div class="relative aspect-video rounded-3xl overflow-hidden gold-border gold-glow shadow-2xl">
+        <iframe 
+          src="https://www.youtube.com/embed/sxtUm45nMAg" 
+          title="Atmosfera da Imersão - Figueiredo Academy" 
+          class="absolute inset-0 w-full h-full border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS (CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Estrutura completa</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Você não precisa gastar milhares para começar. <span class="gold-text">Nós fornecemos a estrutura!</span>
+        </h2>
+        <p class="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Um dos maiores obstáculos no início da carreira é o alto custo dos materiais. Na Figueiredo Academy, nós assumimos essa parte pesada para você.
+        </p>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop -->
+      <div class="mt-14 flex md:grid md:grid-cols-2 gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+        <div class="relative gold-border rounded-3xl p-8 glass-strong gold-glow shrink-0 w-[88vw] md:w-auto snap-center">
+          <div class="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/30 px-4 py-1.5 text-xs font-semibold text-gold uppercase tracking-widest mb-6">
+            <i data-lucide="check" class="h-3.5 w-3.5"></i> Incluído
+          </div>
+          <h3 class="text-2xl font-bold mb-6">O que <span class="gold-text">NÓS fornecemos</span> para você usar no curso</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-gold/20 border border-gold/40 grid place-items-center shrink-0">
+                <i data-lucide="check" class="h-3 w-3 text-gold" stroke-width="3"></i>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/90">Manequim completo</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-gold/20 border border-gold/40 grid place-items-center shrink-0">
+                <i data-lucide="check" class="h-3 w-3 text-gold" stroke-width="3"></i>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/90">Motor de bancada</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-gold/20 border border-gold/40 grid place-items-center shrink-0">
+                <i data-lucide="check" class="h-3 w-3 text-gold" stroke-width="3"></i>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/90">Adesivos e Resinas Compostas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-gold/20 border border-gold/40 grid place-items-center shrink-0">
+                <i data-lucide="check" class="h-3 w-3 text-gold" stroke-width="3"></i>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/90">Kit de Acabamento e Polimento padrão</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-gold/20 border border-gold/40 grid place-items-center shrink-0">
+                <i data-lucide="check" class="h-3 w-3 text-gold" stroke-width="3"></i>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/90">Kit completo de Espátulas</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl p-8 glass shrink-0 w-[88vw] md:w-auto snap-center">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-6">
+            Básico
+          </div>
+          <h3 class="text-2xl font-bold mb-6">O que <span class="text-foreground">VOCÊ precisa trazer</span></h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-white/5 border border-white/15 grid place-items-center shrink-0">
+                <span class="h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/85">Fotopolimerizador</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-white/5 border border-white/15 grid place-items-center shrink-0">
+                <span class="h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/85">Contra-ângulo Baixa Rotação</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-white/5 border border-white/15 grid place-items-center shrink-0">
+                <span class="h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/85">Lápis ou lapiseira azul e vermelho</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-white/5 border border-white/15 grid place-items-center shrink-0">
+                <span class="h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/85">Discos de lixa básicos (Soft-Lex) e mandril</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-5 w-5 rounded-full bg-white/5 border border-white/15 grid place-items-center shrink-0">
+                <span class="h-1.5 w-1.5 rounded-full bg-muted-foreground"></span>
+              </span>
+              <span class="text-sm sm:text-base text-foreground/85">Pincel tocoyama</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE (CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(255,184,0,0.08),transparent_60%)]"></div>
+    <div class="mx-auto max-w-6xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Cronograma</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Cronograma <span class="gold-text">Dinâmico</span> de 2 Dias
+        </h2>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop -->
+      <div class="mt-16 flex md:grid md:grid-cols-2 gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+        <div class="glass-strong gold-border rounded-3xl p-8 relative shrink-0 w-[88vw] md:w-auto snap-center">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] font-black">
+              1
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-[0.3em] text-gold">Dia 1</div>
+              <div class="text-sm text-muted-foreground">Sexta-feira</div>
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-5">Fundamentos e Mão na Massa</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 rounded-xl bg-white/[0.03] border border-white/5 p-4">
+              <i data-lucide="clock" class="h-4 w-4 text-gold mt-1 shrink-0"></i>
+              <div>
+                <div class="text-xs uppercase tracking-widest text-gold mb-1">Manhã</div>
+                <div class="text-sm text-foreground/90">Teoria focada no dia a dia clínico.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-white/[0.03] border border-white/5 p-4">
+              <i data-lucide="clock" class="h-4 w-4 text-gold mt-1 shrink-0"></i>
+              <div>
+                <div class="text-xs uppercase tracking-widest text-gold mb-1">Tarde</div>
+                <div class="text-sm text-foreground/90">Hands-on de preparo, adesão e anatomia primária.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-strong gold-border rounded-3xl p-8 relative shrink-0 w-[88vw] md:w-auto snap-center">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] font-black">
+              2
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-[0.3em] text-gold">Dia 2</div>
+              <div class="text-sm text-muted-foreground">Sábado</div>
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-5">Finalização e Protocolo Clínico</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 rounded-xl bg-white/[0.03] border border-white/5 p-4">
+              <i data-lucide="clock" class="h-4 w-4 text-gold mt-1 shrink-0"></i>
+              <div>
+                <div class="text-xs uppercase tracking-widest text-gold mb-1">Manhã</div>
+                <div class="text-sm text-foreground/90">Hands-on (Estratificação simplificada).</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-white/[0.03] border border-white/5 p-4">
+              <i data-lucide="clock" class="h-4 w-4 text-gold mt-1 shrink-0"></i>
+              <div>
+                <div class="text-xs uppercase tracking-widest text-gold mb-1">Tarde</div>
+                <div class="text-sm text-foreground/90">Hands-on (Acabamento, textura e polimento para o brilho perfeito).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORS (CARROSSEL DE FOTOS, BOTOES INSTAGRAM E SELOS) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl grid lg:grid-cols-2 gap-14 items-center">
+      
+      <!-- CARROSSEL DE FOTOS MENTORES (4 SLIDES) -->
+      <div class="relative gold-glow order-2 lg:order-1">
+        <div class="relative rounded-2xl overflow-hidden gold-border p-1">
+          <div class="rounded-xl overflow-hidden relative aspect-[4/5]" id="mentor-carousel">
+            <!-- Slide 1 -->
+            <img src="assets/mentores1.jpeg" alt="Mentores Slide 1" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" />
+            <!-- Slide 2 -->
+            <img src="assets/mentores2.jpeg" alt="Mentores Slide 2" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+            <!-- Slide 3 -->
+            <img src="assets/mentores3.jpeg" alt="Mentores Slide 3" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+            <!-- Slide 4 -->
+            <img src="assets/mentores4.jpeg" alt="Mentores Slide 4" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+
+            <!-- Controles do Carrossel (Navegação) -->
+            <div class="absolute inset-x-0 bottom-4 flex justify-center gap-2 z-10">
+              <button onclick="setMentorSlide(0)" class="mentor-dot h-2 w-6 rounded-full bg-gold transition-all"></button>
+              <button onclick="setMentorSlide(1)" class="mentor-dot h-2 w-2 rounded-full bg-white/40 transition-all"></button>
+              <button onclick="setMentorSlide(2)" class="mentor-dot h-2 w-2 rounded-full bg-white/40 transition-all"></button>
+              <button onclick="setMentorSlide(3)" class="mentor-dot h-2 w-2 rounded-full bg-white/40 transition-all"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFORMAÇÕES, INSTAGRAMS E SELOS -->
+      <div class="order-1 lg:order-2">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Seus mentores</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Drs. <span class="gold-text">Breno e Ramon</span> Figueiredo
+        </h2>
+        
+        <!-- Botões de Instagram -->
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://www.instagram.com/drbrenofigueiredo/" target="_blank" rel="noopener noreferrer" class="glass rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold hover:border-gold/60 transition inline-flex items-center gap-2">
+            <i data-lucide="instagram" class="h-4 w-4"></i> Dr. Breno
+          </a>
+          <a href="https://www.instagram.com/drfigueiredoramon/" target="_blank" rel="noopener noreferrer" class="glass rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold hover:border-gold/60 transition inline-flex items-center gap-2">
+            <i data-lucide="instagram" class="h-4 w-4"></i> Dr. Ramon
+          </a>
+        </div>
+
+        <p class="mt-6 text-lg text-muted-foreground leading-relaxed">
+          Mais do que professores, somos dentistas que vivem a clínica diária. Já passamos pela mesma insegurança que você sente hoje.
+        </p>
+        <p class="mt-4 text-lg text-muted-foreground leading-relaxed">
+          Desenvolvemos este método porque acreditamos que <span class="text-foreground">todo recém-formado tem o direito</span> de começar sua carreira com protocolos previsíveis e de alta qualidade.
+        </p>
+
+        <!-- SELOS DE AUTORIDADE -->
+        <div class="mt-8 grid grid-cols-2 gap-3">
+          <div class="glass rounded-xl p-3 flex items-center gap-3 border-gold/20">
+            <i data-lucide="award" class="h-5 w-5 text-gold shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Sorriso mais bonito Miss Universo</span>
+          </div>
+          <div class="glass rounded-xl p-3 flex items-center gap-3 border-gold/20">
+            <i data-lucide="badge-check" class="h-5 w-5 text-gold shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Partner PHS</span>
+          </div>
+          <div class="glass rounded-xl p-3 flex items-center gap-3 border-gold/20">
+            <i data-lucide="badge-check" class="h-5 w-5 text-gold shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Partner DHpro</span>
+          </div>
+          <div class="glass rounded-xl p-3 flex items-center gap-3 border-gold/20">
+            <i data-lucide="mic" class="h-5 w-5 text-gold shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Palestrante CIOSP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION (COM VÍDEO SHORTS DO INSTITUTO) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-12">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">A sede</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Sua imersão será no <span class="gold-text">coração do Instituto Figueiredo</span>
+        </h2>
+      </div>
+
+      <!-- Vídeo no formato Shorts (Vertical 9:16) -->
+      <div class="max-w-sm mx-auto mb-10">
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden gold-border gold-glow shadow-2xl">
+          <iframe 
+            src="https://www.youtube.com/embed/V2yUSniTn38" 
+            title="Instituto Figueiredo - Ipatinga/MG" 
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="glass-strong rounded-3xl p-8 flex flex-col md:flex-row items-start md:items-center gap-4 max-w-4xl mx-auto">
+        <div class="h-12 w-12 rounded-2xl bg-gold/15 border border-gold/30 grid place-items-center shrink-0">
+          <i data-lucide="map-pin" class="h-5 w-5 text-gold"></i>
+        </div>
+        <p class="text-base sm:text-lg text-foreground/90">
+          Estamos em <strong>Ipatinga / MG</strong> — apenas 220 km de Belo Horizonte, com fácil acesso pelas principais rodovias e pelo <strong>Aeroporto Regional do Vale do Aço</strong>.
+        </p>
+      </div>
+
+      <div class="mt-10 max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+          <i data-lucide="hotel" class="h-5 w-5 text-gold"></i> Hospedagem recomendada
+        </h3>
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="glass rounded-2xl p-6 hover:border-gold/30 transition">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-lg font-bold">Steel Valley Hotel</h4>
+              <span class="text-[10px] uppercase tracking-widest text-gold border border-gold/40 rounded-full px-2 py-1">Custo-benefício</span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">Conforto e praticidade, excelente custo-benefício.</p>
+          </div>
+          <div class="glass rounded-2xl p-6 hover:border-gold/30 transition">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-lg font-bold">Panorama Tower Hotel</h4>
+              <span class="text-[10px] uppercase tracking-widest text-gold border border-gold/40 rounded-full px-2 py-1">Premium</span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">Excelente estrutura e comodidade para descansar após os dias intensos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (3 SHORTS - CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-14">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Depoimentos</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Não ouça apenas nós. <span class="gold-text">Ouça seus colegas:</span>
+        </h2>
+      </div>
+
+      <!-- 3 Vídeos Shorts (Flex no mobile + snap, Grid no desktop) -->
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0 max-w-5xl mx-auto">
+        <!-- Shorts 1 -->
+        <div class="shrink-0 w-[80vw] md:w-auto snap-center">
+          <div class="relative aspect-[9/16] rounded-3xl overflow-hidden gold-border shadow-2xl">
+            <iframe 
+              src="https://www.youtube.com/embed/NyPowWpWIfY" 
+              title="Depoimento Aluno 1" 
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Shorts 2 -->
+        <div class="shrink-0 w-[80vw] md:w-auto snap-center">
+          <div class="relative aspect-[9/16] rounded-3xl overflow-hidden gold-border shadow-2xl">
+            <iframe 
+              src="https://www.youtube.com/embed/ICb-_4gbBJU" 
+              title="Depoimento Aluno 2" 
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Shorts 3 -->
+        <div class="shrink-0 w-[80vw] md:w-auto snap-center">
+          <div class="relative aspect-[9/16] rounded-3xl overflow-hidden gold-border shadow-2xl">
+            <iframe 
+              src="https://www.youtube.com/embed/NyPowWpWIfY" 
+              title="Depoimento Aluno 3" 
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER SECTION -->
+  <section id="oferta" class="py-24 sm:py-32 px-4 sm:px-6 relative">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(255,184,0,0.14),transparent_65%)]"></div>
+    <div class="mx-auto max-w-4xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Investimento</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Dê o passo que vai <span class="gold-text">transformar o início da sua carreira</span>
+        </h2>
+      </div>
+
+      <div class="mt-14 relative gold-glow">
+        <div class="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-[#ffd76a]/60 via-[#ffb800]/30 to-[#d4af37]/60 blur-xl opacity-70"></div>
+        <div class="relative rounded-[2rem] glass-strong gold-border p-8 sm:p-12">
+          <div class="text-center">
+            <div class="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 px-5 py-2 text-xs font-bold text-gold uppercase tracking-widest">
+              <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Investimento Total
+            </div>
+            <div class="mt-6 font-display font-black">
+              <span class="text-5xl sm:text-6xl md:text-7xl gold-text">R$ 2.998,00</span>
+            </div>
+          </div>
+
+          <div class="mt-10 hairline"></div>
+
+          <div class="mt-10 grid sm:grid-cols-2 gap-5">
+            <div class="rounded-2xl bg-white/[0.03] border border-white/10 p-6">
+              <div class="text-xs uppercase tracking-widest text-gold mb-2">Entrada</div>
+              <div class="text-3xl font-bold">R$ 400,00</div>
+              <p class="text-sm text-muted-foreground mt-2">Garante sua vaga e cadeira exclusiva via <strong class="text-foreground">PIX</strong>.</p>
+            </div>
+            <div class="rounded-2xl bg-white/[0.03] border border-white/10 p-6">
+              <div class="text-xs uppercase tracking-widest text-gold mb-2">Saldo</div>
+              <div class="text-3xl font-bold">R$ 2.598,00</div>
+              <p class="text-sm text-muted-foreground mt-2">
+                ou em até <strong class="gold-text">12x de R$ 247,05</strong> no cartão de crédito.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 rounded-xl border border-gold/25 bg-gold/5 px-5 py-4 text-sm text-foreground/90 text-center">
+            ⚠ Turma limitada a <strong class="gold-text">20 alunos</strong>. Atenção individual garantida.
+          </div>
+
+          <div class="mt-10 flex justify-center">
+            <a href="https://wa.me/553196486833?text=Olá!%20Gostaria%20de%20garantir%20minha%20vaga%20no%20curso%20Resina%20Composta%20Essential." target="_blank" rel="noopener noreferrer" class="btn-wa inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm sm:text-base uppercase tracking-wider transition">
+              FALAR COM A EQUIPE E GARANTIR MINHA VAGA
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6">
+    <div class="mx-auto max-w-4xl">
+      <div class="text-center mx-auto max-w-3xl">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Dúvidas</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Perguntas <span class="gold-text">Frequentes</span>
+        </h2>
+      </div>
+
+      <div class="mt-14 space-y-3">
+        <!-- FAQ Item 1 -->
+        <div class="glass rounded-2xl transition faq-item border-gold/30">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4">
+            <span class="font-semibold text-base sm:text-lg pr-2">Sou acadêmico(a) do penúltimo/último período. Esse curso é para mim?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-gold shrink-0 transition-transform duration-300 rotate-180"></i>
+          </button>
+          <div class="faq-answer px-6 pb-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            Sim. O Essential foi desenhado especificamente para acadêmicos dos últimos períodos e recém-formados que querem executar resina anterior com segurança desde a primeira consulta.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="glass rounded-2xl transition faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4">
+            <span class="font-semibold text-base sm:text-lg pr-2">O curso é apenas prático ou tem teoria?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-gold shrink-0 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            Os dois. A manhã de sexta-feira concentra a teoria focada no dia a dia clínico; todas as demais horas são hands-on em manequim, com acompanhamento próximo dos mentores.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="glass rounded-2xl transition faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4">
+            <span class="font-semibold text-base sm:text-lg pr-2">E se eu não tiver todo o material da lista básica?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-gold shrink-0 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            A lista do que você precisa trazer é mínima e essencial. Quando possível, o Instituto ajuda com empréstimo pontual — fale com a equipe antes do curso para alinhar.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="glass rounded-2xl transition faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4">
+            <span class="font-semibold text-base sm:text-lg pr-2">Consigo parcelar a entrada?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-gold shrink-0 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            A entrada de R$ 400,00 é feita via PIX para reservar sua cadeira. O saldo restante pode ser parcelado em até 12x no cartão de crédito.
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="glass rounded-2xl transition faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between gap-4">
+            <span class="font-semibold text-base sm:text-lg pr-2">Como faço para chegar ao Instituto Figueiredo?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-gold shrink-0 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-muted-foreground leading-relaxed text-sm sm:text-base">
+            Estamos em Ipatinga/MG, a 220 km de Belo Horizonte, com fácil acesso por rodovias federais e pelo Aeroporto Regional do Vale do Aço (IPN).
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="#oferta" class="btn-gold inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm sm:text-base uppercase tracking-wider transition">
+          QUERO GARANTIR MINHA VAGA NO ESSENTIAL
+          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVA SEÇÃO: OUTROS CURSOS / ESTEIRA DE PRODUTOS -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative border-t border-white/5">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-14">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-gold/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold">Outras Opções</span>
+          <span class="h-px w-8 bg-gold/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          Esse curso não se encaixa ao seu perfil? <span class="gold-text">Conheça nossas outras imersões!</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Temos treinamentos desenhados para cada momento da sua jornada profissional na odontologia estética.
+        </p>
+      </div>
+
+      <!-- Carrossel no mobile (flex + snap), Grid no Desktop (3 colunas) -->
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0 max-w-6xl mx-auto">
+        
+        <!-- CARD 1: PLATINUM -->
+        <div class="glass-strong rounded-3xl overflow-hidden gold-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/platinum.png" alt="Resina Composta Platinum" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/Breno-ramon-1.png'" />
+            <div class="absolute top-3 left-3 bg-gold/90 text-[#0a0a0c] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              3 Dias · Avançado
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Resina Composta <span class="gold-text">Platinum</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                O passo seguinte para dentistas com mais de 3 anos de clínica. Domine estratificação avançada, opalescência e texturização de elite para elevar o valor cobrado no seu consultório.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="platinum.html" class="w-full glass rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-gold hover:bg-gold hover:text-[#0a0a0c] transition flex items-center justify-center gap-2">
+                Conhecer Platinum <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: VIP RESINA -->
+        <div class="glass-strong rounded-3xl overflow-hidden gold-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/curso-vip-resina.jpeg" alt="Resina Composta VIP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/caso-1.jpeg'" />
+            <div class="absolute top-3 left-3 bg-gold/90 text-[#0a0a0c] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              100% Prático · Paciente Real
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Resina Composta <span class="gold-text">VIP</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Chega de treinar apenas em manequim. Viva uma experiência 100% prática atendendo um paciente modelo com a nossa supervisão direta no Instituto Figueiredo.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="vip.html" class="w-full glass rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-gold hover:bg-gold hover:text-[#0a0a0c] transition flex items-center justify-center gap-2">
+                Conhecer VIP <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: LAMINADOS CERÂMICOS VIP -->
+        <div class="glass-strong rounded-3xl overflow-hidden gold-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/laminados.jpeg" alt="Laminados Cerâmicos VIP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/caso-2.jpeg'" />
+            <div class="absolute top-3 left-3 bg-gold/90 text-[#0a0a0c] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              4 Dias · Porcelana & Lentes
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Laminados <span class="gold-text">Cerâmicos VIP</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Domine o universo das lentes de contato e facetas de porcelana. Um protocolo completo de 4 dias — do preparo à cimentação — para transformar o ticket da sua clínica.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="laminados.html" class="w-full glass rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-gold hover:bg-gold hover:text-[#0a0a0c] transition flex items-center justify-center gap-2">
+                Conhecer Laminados <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 mt-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="h-9 w-9 rounded-full bg-gradient-to-br from-[#ffd76a] to-[#d4af37] grid place-items-center text-[#0a0a0c] font-black">F</span>
+        <div>
+          <div class="font-display font-bold">Figueiredo <span class="gold-text">Academy</span></div>
+          <div class="text-xs text-muted-foreground">Design de alta performance para odontologia</div>
+        </div>
+      </div>
+      <div class="text-xs text-muted-foreground text-center md:text-right">
+        © <span id="year"></span> Figueiredo Academy. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+
+    // Toggle FAQ Accordions
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const icon = button.querySelector('[data-lucide="chevron-down"]');
+
+      const isHidden = answer.classList.contains('hidden');
+
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+      document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('border-gold/30'));
+      document.querySelectorAll('[data-lucide="chevron-down"]').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        item.classList.add('border-gold/30');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Carrossel dos Mentores (Slides)
+    let currentMentorSlide = 0;
+    const slides = document.querySelectorAll('.mentor-slide');
+    const dots = document.querySelectorAll('.mentor-dot');
+
+    function setMentorSlide(index) {
+      slides[currentMentorSlide].classList.remove('opacity-100');
+      slides[currentMentorSlide].classList.add('opacity-0');
+      dots[currentMentorSlide].classList.remove('bg-gold', 'w-6');
+      dots[currentMentorSlide].classList.add('bg-white/40', 'w-2');
+
+      currentMentorSlide = index;
+
+      slides[currentMentorSlide].classList.remove('opacity-0');
+      slides[currentMentorSlide].classList.add('opacity-100');
+      dots[currentMentorSlide].classList.remove('bg-white/40', 'w-2');
+      dots[currentMentorSlide].classList.add('bg-gold', 'w-6');
+    }
+
+    // Alternar slides dos mentores automaticamente a cada 4 segundos
+    setInterval(() => {
+      let nextSlide = (currentMentorSlide + 1) % slides.length;
+      setMentorSlide(nextSlide);
+    }, 4000);
+  </script>
+</body>
+</html>
