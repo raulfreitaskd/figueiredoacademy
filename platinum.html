@@ -1058,8 +1058,12 @@
     }
 
     async function carregarDadosDaPlanilha() {
-      const urlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQGur7RBxuqSzFg5tPGnkcVwYhDp2jIp5a5uMjzcFM6g83IJCqhJTIHKZY0iDxCnGf9FBNG7ZS1N7Q/pub?gid=1280683382&single=true&output=csv'; 
-      
+      // Link base da planilha
+    const baseUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQGur7RBxuqSzFg5tPGnkcVwYhDp2jIp5a5uMjzcFM6g83IJCqhJTIHKZY0iDxCnGf9FBNG7ZS1N7Q/pub?gid=1280683382&single=true&output=csv'; 
+    
+    // Truque do "Cache Buster": adiciona o milissegundo atual para forçar o navegador a não usar cache
+    const urlCSV = baseUrl + '&t=' + new Date().getTime();
+    
       // SE FOR TESTAR, TROQUE AQUI PARA: 'Resinas Essential - Ipatinga/MG'
       const nomeDoCurso = 'Resina Composta Platinum - Ipatinga/MG'; 
 
