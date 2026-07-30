@@ -1063,7 +1063,7 @@
     
     // Truque do "Cache Buster": adiciona o milissegundo atual para forçar o navegador a não usar cache
     const urlCSV = baseUrl + '&t=' + new Date().getTime();
-    
+
       // SE FOR TESTAR, TROQUE AQUI PARA: 'Resinas Essential - Ipatinga/MG'
       const nomeDoCurso = 'Resina Composta Platinum - Ipatinga/MG'; 
 
@@ -1096,7 +1096,7 @@
 
                 if (vagasDisponiveis > 0) {
                   elementoVagas.innerText = `Apenas ${vagasDisponiveis} vagas restantes`;
-                  if (vagasDisponiveis <= 3) {
+                  if (vagasDisponiveis <= 6) {
                     elementoVagas.classList.remove('champagne-text');
                     elementoVagas.classList.add('text-red-500');
                     if(pulse) { pulse.classList.replace('bg-champagne', 'bg-red-500'); }
