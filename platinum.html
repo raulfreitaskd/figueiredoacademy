@@ -843,14 +843,25 @@
           </div>
         </div>
 
-        <!-- BLOCO DE ESCASSEZ DINÂMICO (INTEGRAÇÃO GOOGLE SHEETS) -->
+        <!-- BLOCO DE ESCASSEZ DINÂMICO COM SANFONA -->
         <div class="glass-obsidian rounded-2xl p-6 border-champagne/40 text-center max-w-sm mx-auto mt-8">
           <div class="text-xs uppercase tracking-widest text-muted-foreground mb-2">Próxima Turma Confirmada</div>
           <div id="planilha-data" class="text-xl font-bold text-foreground">Carregando calendário...</div>
           
-          <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-champagne/10 border border-champagne/30 px-4 py-2">
-            <span class="h-2 w-2 rounded-full bg-champagne live-pulse"></span>
+          <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-champagne/10 border border-champagne/30 px-4 py-2" id="vagas-container">
+            <span class="h-2 w-2 rounded-full bg-champagne live-pulse" id="vagas-pulse"></span>
             <span id="planilha-vagas" class="text-sm font-bold champagne-text">Consultando vagas...</span>
+          </div>
+
+          <!-- Sanfona para Datas Futuras -->
+          <div id="accordion-container" class="hidden mt-6 border-t border-champagne/20 pt-4">
+            <button onclick="document.getElementById('future-dates').classList.toggle('hidden')" class="text-xs uppercase tracking-widest text-champagne hover:text-white transition flex items-center justify-center gap-2 w-full">
+              Ver outras datas
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div id="future-dates" class="hidden mt-4 space-y-2 text-left">
+              <!-- Preenchido pelo Javascript -->
+            </div>
           </div>
         </div>
         <!-- FIM DO BLOCO -->
@@ -1025,24 +1036,40 @@
     </div>
   </footer>
 
-  <!-- SCRIPT DE INTEGRAÇÃO COM GOOGLE SHEETS -->
+  <!-- SCRIPT DE INTEGRAÇÃO COM GOOGLE SHEETS COM FILTRO DE DATA -->
   <script>
+    // Função para verificar se a data está no futuro comparado ao dia de hoje
+    function isDataNoFuturo(dataPlanilha) {
+      const mapaMeses = { 'janeiro': 0, 'fevereiro': 1, 'março': 2, 'marzo': 2, 'abril': 3, 'maio': 4, 'junho': 5, 'julho': 6, 'agosto': 7, 'setembro': 8, 'outubro': 9, 'novembro': 10, 'dezembro': 11 };
+      
+      // Procura pelo último dia e pelo mês no texto (ex: "9 a 11 de Julho" -> extrai o 11 e o Julho)
+      const match = dataPlanilha.toLowerCase().match(/(\d+)\s+de\s+([a-zç]+)/);
+      if (!match) return true; // Se não entender a data, mostra por precaução
+
+      const diaEvento = parseInt(match[1], 10);
+      const mesEvento = mapaMeses[match[2]];
+      const anoAtual = new Date().getFullYear(); // Assume o ano atual do sistema
+      
+      // Cria a data do evento considerando as 23:59:59 do último dia do curso
+      const dataLimiteEvento = new Date(anoAtual, mesEvento, diaEvento, 23, 59, 59);
+      const hoje = new Date(); // Dia atual do acesso
+
+      return dataLimiteEvento >= hoje;
+    }
+
     async function carregarDadosDaPlanilha() {
-      // Usando o parâmetro ?output=csv em vez de ?pubhtml para o site ler os dados sem o layout da página
       const urlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQGur7RBxuqSzFg5tPGnkcVwYhDp2jIp5a5uMjzcFM6g83IJCqhJTIHKZY0iDxCnGf9FBNG7ZS1N7Q/pub?gid=1280683382&single=true&output=csv'; 
       
-      // IMPORTANTE: Este nome precisa ser digitado de forma exata na sua coluna "A" da planilha
+      // SE FOR TESTAR, TROQUE AQUI PARA: 'Resinas Essential - Ipatinga/MG'
       const nomeDoCurso = 'Resina Composta Platinum - Ipatinga/MG'; 
 
       try {
         const resposta = await fetch(urlCSV);
         const dados = await resposta.text();
-        
-        // Quebra o texto da planilha em linhas
         const linhas = dados.split('\n');
         
-        let dataEncontrada = 'Vagas Esgotadas';
-        let vagasEncontradas = 0;
+        let dataPrincipalEncontrada = false;
+        let htmlDatasFuturas = '';
 
         // Pula a linha 0 (cabeçalho) e percorre as turmas
         for (let i = 1; i < linhas.length; i++) {
@@ -1051,43 +1078,68 @@
           if (colunas.length >= 5) {
             let cursoPlanilha = colunas[0].trim();
             let dataPlanilha = colunas[1].trim();
-            // Evita erros se houver caracteres invisíveis no número
             let vagasDisponiveis = parseInt(colunas[4].trim().replace(/\D/g, ''), 10);
 
-            // Se achar o curso e ainda tiver vaga
-            if (cursoPlanilha === nomeDoCurso && vagasDisponiveis > 0) {
-              dataEncontrada = dataPlanilha;
-              vagasEncontradas = vagasDisponiveis;
-              break; // Para na primeira turma futura com vagas
+            // Se for o curso certo e a data do calendário ainda não tiver passado
+            if (cursoPlanilha === nomeDoCurso && isDataNoFuturo(dataPlanilha)) {
+              
+              if (!dataPrincipalEncontrada) {
+                // Preenche o card em Destaque com a PRIMEIRA data futura
+                document.getElementById('planilha-data').innerText = dataPlanilha;
+                
+                const elementoVagas = document.getElementById('planilha-vagas');
+                const pulse = document.getElementById('vagas-pulse');
+
+                if (vagasDisponiveis > 0) {
+                  elementoVagas.innerText = `Apenas ${vagasDisponiveis} vagas restantes`;
+                  if (vagasDisponiveis <= 3) {
+                    elementoVagas.classList.remove('champagne-text');
+                    elementoVagas.classList.add('text-red-500');
+                    if(pulse) { pulse.classList.replace('bg-champagne', 'bg-red-500'); }
+                  }
+                } else {
+                  elementoVagas.innerText = 'Lista de Espera';
+                  elementoVagas.classList.replace('champagne-text', 'text-muted-foreground');
+                  if(pulse) { pulse.classList.add('hidden'); }
+                }
+                
+                dataPrincipalEncontrada = true;
+              } else {
+                // As PRÓXIMAS datas entram na sanfona
+                let textoStatus = vagasDisponiveis > 0 ? `${vagasDisponiveis} vagas` : 'Esgotado';
+                let corStatus = vagasDisponiveis > 0 ? 'text-champagne' : 'text-red-500';
+                
+                htmlDatasFuturas += `
+                  <div class="flex items-center justify-between text-sm border border-white/5 bg-white/[0.02] rounded-lg p-3">
+                    <span class="text-foreground/90 font-medium">${dataPlanilha}</span>
+                    <span class="${corStatus} text-xs font-bold uppercase tracking-wider">${textoStatus}</span>
+                  </div>
+                `;
+              }
             }
           }
         }
 
-        // Injeta os dados da planilha direto no HTML
-        document.getElementById('planilha-data').innerText = dataEncontrada;
-        
-        const elementoVagas = document.getElementById('planilha-vagas');
-        if (vagasEncontradas > 0) {
-          elementoVagas.innerText = `Apenas ${vagasEncontradas} vagas restantes`;
-          
-          // Gatilho de urgência: se tiver 3 vagas ou menos, fica vermelho
-          if (vagasEncontradas <= 3) {
-            elementoVagas.classList.remove('champagne-text');
-            elementoVagas.classList.add('text-red-500');
-          }
-        } else {
-          elementoVagas.innerText = 'Lista de Espera';
-          elementoVagas.classList.replace('champagne-text', 'text-muted-foreground');
+        // Se não achar NENHUMA data futura
+        if (!dataPrincipalEncontrada) {
+          document.getElementById('planilha-data').innerText = 'Novas Turmas em Breve';
+          document.getElementById('planilha-vagas').innerText = 'Inscrições sob consulta';
+          document.getElementById('vagas-pulse').classList.add('hidden');
+        }
+
+        // Se achou datas extras, injeta na sanfona e exibe o botão
+        if (htmlDatasFuturas !== '') {
+          document.getElementById('future-dates').innerHTML = htmlDatasFuturas;
+          document.getElementById('accordion-container').classList.remove('hidden');
         }
 
       } catch (erro) {
         console.error('Erro ao conectar com a planilha:', erro);
-        document.getElementById('planilha-data').innerText = 'Consulte datas via WhatsApp';
-        document.getElementById('planilha-vagas').innerText = 'Inscrições sob consulta';
+        document.getElementById('planilha-data').innerText = 'Consulte via WhatsApp';
+        document.getElementById('planilha-vagas').innerText = 'Calendário sob consulta';
       }
     }
 
-    // Aciona a função assim que a página carregar
     carregarDadosDaPlanilha();
   </script>
 
