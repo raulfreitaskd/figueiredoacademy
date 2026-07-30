@@ -843,6 +843,18 @@
           </div>
         </div>
 
+        <!-- BLOCO DE ESCASSEZ DINÂMICO (INTEGRAÇÃO GOOGLE SHEETS) -->
+        <div class="glass-obsidian rounded-2xl p-6 border-champagne/40 text-center max-w-sm mx-auto mt-8">
+          <div class="text-xs uppercase tracking-widest text-muted-foreground mb-2">Próxima Turma Confirmada</div>
+          <div id="planilha-data" class="text-xl font-bold text-foreground">Carregando calendário...</div>
+          
+          <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-champagne/10 border border-champagne/30 px-4 py-2">
+            <span class="h-2 w-2 rounded-full bg-champagne live-pulse"></span>
+            <span id="planilha-vagas" class="text-sm font-bold champagne-text">Consultando vagas...</span>
+          </div>
+        </div>
+        <!-- FIM DO BLOCO -->
+
         <div class="mt-10">
           <a href="https://wa.me/553196486833?text=Olá!%20Tenho%20interesse%20em%20solicitar%20minha%20vaga%20para%20o%20curso%20Resina%20Composta%20Platinum." target="_blank" rel="noopener noreferrer" class="btn-champagne w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full px-10 py-5 text-sm sm:text-base uppercase tracking-wider transition">
             GARANTIR MINHA VAGA COM A EQUIPE
@@ -1013,7 +1025,73 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- SCRIPT DE INTEGRAÇÃO COM GOOGLE SHEETS -->
+  <script>
+    async function carregarDadosDaPlanilha() {
+      // Usando o parâmetro ?output=csv em vez de ?pubhtml para o site ler os dados sem o layout da página
+      const urlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQGur7RBxuqSzFg5tPGnkcVwYhDp2jIp5a5uMjzcFM6g83IJCqhJTIHKZY0iDxCnGf9FBNG7ZS1N7Q/pub?gid=1280683382&single=true&output=csv'; 
+      
+      // IMPORTANTE: Este nome precisa ser digitado de forma exata na sua coluna "A" da planilha
+      const nomeDoCurso = 'Resina Composta Platinum - Ipatinga/MG'; 
+
+      try {
+        const resposta = await fetch(urlCSV);
+        const dados = await resposta.text();
+        
+        // Quebra o texto da planilha em linhas
+        const linhas = dados.split('\n');
+        
+        let dataEncontrada = 'Vagas Esgotadas';
+        let vagasEncontradas = 0;
+
+        // Pula a linha 0 (cabeçalho) e percorre as turmas
+        for (let i = 1; i < linhas.length; i++) {
+          let colunas = linhas[i].split(',');
+          
+          if (colunas.length >= 5) {
+            let cursoPlanilha = colunas[0].trim();
+            let dataPlanilha = colunas[1].trim();
+            // Evita erros se houver caracteres invisíveis no número
+            let vagasDisponiveis = parseInt(colunas[4].trim().replace(/\D/g, ''), 10);
+
+            // Se achar o curso e ainda tiver vaga
+            if (cursoPlanilha === nomeDoCurso && vagasDisponiveis > 0) {
+              dataEncontrada = dataPlanilha;
+              vagasEncontradas = vagasDisponiveis;
+              break; // Para na primeira turma futura com vagas
+            }
+          }
+        }
+
+        // Injeta os dados da planilha direto no HTML
+        document.getElementById('planilha-data').innerText = dataEncontrada;
+        
+        const elementoVagas = document.getElementById('planilha-vagas');
+        if (vagasEncontradas > 0) {
+          elementoVagas.innerText = `Apenas ${vagasEncontradas} vagas restantes`;
+          
+          // Gatilho de urgência: se tiver 3 vagas ou menos, fica vermelho
+          if (vagasEncontradas <= 3) {
+            elementoVagas.classList.remove('champagne-text');
+            elementoVagas.classList.add('text-red-500');
+          }
+        } else {
+          elementoVagas.innerText = 'Lista de Espera';
+          elementoVagas.classList.replace('champagne-text', 'text-muted-foreground');
+        }
+
+      } catch (erro) {
+        console.error('Erro ao conectar com a planilha:', erro);
+        document.getElementById('planilha-data').innerText = 'Consulte datas via WhatsApp';
+        document.getElementById('planilha-vagas').innerText = 'Inscrições sob consulta';
+      }
+    }
+
+    // Aciona a função assim que a página carregar
+    carregarDadosDaPlanilha();
+  </script>
+
+  <!-- Scripts Nativos -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     lucide.createIcons();
