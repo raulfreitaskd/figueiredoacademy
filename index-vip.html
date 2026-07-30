@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resina Composta VIP — 100% Prático | Figueiredo Academy</title>
+  <meta name="description" content="Imersão individual (1 a 1) de 1 dia com paciente real. Planejamento digital e execução clínica lado a lado com seu mentor." />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Resina Composta VIP — Figueiredo Academy" />
+  <meta property="og:description" content="A experiência clínica definitiva: Você, seu mentor e um paciente real utilizando toda a estrutura do Instituto Figueiredo." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#050505',
+            surface: '#0f0f11',
+            foreground: '#ffffff',
+            'muted-foreground': '#8e8e93',
+            vip: '#E6A87C',
+            'vip-dark': '#B77B66',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS: Onyx & Rose Gold Aesthetic -->
+  <style>
+    body {
+      background-color: #050505;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .vip-text {
+      background: linear-gradient(135deg, #FAD0B4 0%, #E6A87C 50%, #B77B66 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-obsidian {
+      background: rgba(15, 15, 17, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(230, 168, 124, 0.15);
+    }
+
+    .glass-strong {
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(230, 168, 124, 0.25);
+    }
+
+    .vip-border {
+      border: 1px solid rgba(230, 168, 124, 0.3);
+    }
+
+    .vip-glow {
+      box-shadow: 0 0 60px rgba(230, 168, 124, 0.12);
+    }
+
+    .btn-vip {
+      background: linear-gradient(135deg, #FAD0B4 0%, #E6A87C 100%);
+      color: #050505;
+      font-weight: 700;
+      box-shadow: 0 0 25px rgba(230, 168, 124, 0.2);
+    }
+    .btn-vip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(230, 168, 124, 0.4);
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+    }
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+    }
+
+    .hairline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(230, 168, 124, 0.2), transparent);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .live-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body class="min-h-screen overflow-x-hidden antialiased bg-background">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-4">
+      <div class="glass-obsidian rounded-full px-6 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <span class="h-8 w-8 rounded-full bg-gradient-to-br from-[#FAD0B4] to-[#E6A87C] grid place-items-center text-[#050505] font-black text-sm">F</span>
+          <span class="hidden sm:block font-display font-bold tracking-tight text-sm uppercase">
+            Figueiredo <span class="vip-text">Academy</span>
+          </span>
+        </a>
+        <div class="flex items-center gap-3">
+          <span class="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest bg-vip/10 border border-vip/20 text-vip">
+            Formato Individual (1 a 1)
+          </span>
+          <a href="#oferta" class="btn-vip rounded-full px-5 py-2 text-xs uppercase tracking-wider transition">
+            Agendar Data
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[100svh] flex items-center pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img
+        src="assets/hero-fachada.png"
+        alt="Fachada Instituto Figueiredo VIP"
+        class="h-full w-full object-cover opacity-20"
+        onerror="this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1920&auto=format&fit=crop'"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(230,168,124,0.1),transparent_70%)]"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center w-full">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full glass-obsidian px-4 py-2 text-xs uppercase tracking-[0.3em] text-vip mb-6 border border-vip/30">
+          <i data-lucide="user" class="h-3.5 w-3.5 text-vip"></i> Imersão Individual · 1 Dia
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight">
+          A Experiência Clínica Definitiva: <span class="vip-text">Você e o Paciente.</span>
+        </h1>
+        <p class="mt-4 text-lg sm:text-xl text-foreground/90 font-light">
+          1 Aluno. 1 Professor. 1 Paciente Modelo.
+        </p>
+        <p class="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+          Chega de treinar apenas em manequim. Viva um dia de imersão 100% prático, com planejamento digital guiado e execução clínica lado a lado com seu mentor na estrutura mais tecnológica do Instituto Figueiredo.
+        </p>
+        
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a href="#oferta" class="btn-vip inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-sm sm:text-base uppercase tracking-wider transition">
+            CONSULTAR DATAS DISPONÍVEIS
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 grid grid-cols-3 gap-3 max-w-lg">
+          <div class="glass-obsidian rounded-2xl p-3 text-center border-vip/20">
+            <div class="text-lg sm:text-2xl font-bold vip-text">1 a 1</div>
+            <div class="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">Exclusivo</div>
+          </div>
+          <div class="glass-obsidian rounded-2xl p-3 text-center border-vip/20 flex flex-col justify-center items-center">
+            <div class="text-xs sm:text-sm font-bold text-red-400 flex items-center justify-center gap-1 leading-tight">
+              <span class="h-2 w-2 rounded-full bg-red-500 live-pulse shrink-0"></span> PACIENTE REAL
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">100% Prático</div>
+          </div>
+          <div class="glass-obsidian rounded-2xl p-3 text-center border-vip/20">
+            <div class="text-lg sm:text-2xl font-bold vip-text">0</div>
+            <div class="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">Materiais p/ Trazer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative vip-glow">
+        <div class="absolute inset-0 -m-6 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(230,168,124,0.2),transparent_70%)] blur-3xl"></div>
+        <div class="relative rounded-[2.5rem] overflow-hidden glass-strong vip-border p-2">
+          <div class="rounded-[2rem] overflow-hidden relative">
+            <img
+              src="assets/curso-vip-resina.jpeg"
+              alt="Mentoria VIP Resina"
+              class="w-full h-auto object-cover aspect-[4/5]"
+              onerror="this.src='assets/caso-1.jpeg'"
+            />
+            <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent">
+              <div class="text-[11px] uppercase tracking-[0.3em] text-vip font-semibold">Mão na Massa</div>
+              <div class="text-xl font-bold mt-1">Atendimento a quatro mãos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DINÂMICA DO CURSO -->
+  <section class="py-24 px-4 sm:px-6 relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-16">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">Dinâmica Única</span>
+          <span class="h-px w-8 bg-vip/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Como será o seu <span class="vip-text">Dia VIP</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Nenhuma turma lotada. Apenas a vivência intensa da clínica do Instituto, com dedicação integral do seu mentor.
+        </p>
+      </div>
+
+      <!-- CARROSSEL NO MOBILE (FLEX + SNAP), GRID NO DESKTOP -->
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+        
+        <!-- PASSO 1 -->
+        <div class="glass-strong rounded-3xl p-8 vip-border flex flex-col justify-start shrink-0 w-[85vw] md:w-auto snap-center relative">
+          <div class="text-4xl font-black text-white/5 absolute top-6 right-6">01</div>
+          <div class="h-12 w-12 rounded-2xl bg-vip/10 border border-vip/30 grid place-items-center mb-6 relative z-10">
+            <i data-lucide="monitor" class="h-6 w-6 text-vip"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 relative z-10">Planejamento & Teoria Direta</h3>
+          <p class="text-sm text-muted-foreground leading-relaxed relative z-10">
+            No período da manhã, sentamos juntos para o planejamento digital do caso. Fazemos um resumo teórico focado exclusivamente no que será executado e definimos a estratégia do procedimento passo a passo.
+          </p>
+        </div>
+
+        <!-- PASSO 2 -->
+        <div class="glass-strong rounded-3xl p-8 vip-border flex flex-col justify-start shrink-0 w-[85vw] md:w-auto snap-center relative bg-vip/5">
+          <div class="text-4xl font-black text-white/5 absolute top-6 right-6">02</div>
+          <div class="h-12 w-12 rounded-2xl bg-vip text-[#050505] grid place-items-center mb-6 relative z-10">
+            <i data-lucide="syringe" class="h-6 w-6"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 relative z-10">Atendimento ao Paciente</h3>
+          <p class="text-sm text-muted-foreground leading-relaxed relative z-10">
+            A transição imediata da teoria para a prática. Você e o professor atendem juntos um paciente modelo, dividindo a cadeira e superando os desafios clínicos reais — sangramento, isolamento e óptica dental in vivo.
+          </p>
+        </div>
+
+        <!-- PASSO 3 -->
+        <div class="glass-strong rounded-3xl p-8 vip-border flex flex-col justify-start shrink-0 w-[85vw] md:w-auto snap-center relative">
+          <div class="text-4xl font-black text-white/5 absolute top-6 right-6">03</div>
+          <div class="h-12 w-12 rounded-2xl bg-vip/10 border border-vip/30 grid place-items-center mb-6 relative z-10">
+            <i data-lucide="clock" class="h-6 w-6 text-vip"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 relative z-10">Sem Hora Para Acabar</h3>
+          <p class="text-sm text-muted-foreground leading-relaxed relative z-10">
+            Aqui o tempo joga a nosso favor. O curso não tem sinal para encerrar: nós só finalizamos quando o caso estiver impecável, com a textura e o brilho perfeitos. O foco é a sua maestria absoluta.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA DO INSTITUTO (FOTOS - CARROSSEL MOBILE) -->
+  <section class="py-24 px-4 sm:px-6 relative border-t border-white/5">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-14">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">Estrutura All-Inclusive</span>
+          <span class="h-px w-8 bg-vip/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+          Esqueça a lista de materiais.<br><span class="vip-text">Utilize a nossa Clínica Inteira.</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Nesta imersão VIP, você não precisa se preocupar em trazer resinas, espátulas, contra-ângulos ou lixas. Todo o acervo premium do Instituto Figueiredo está à sua disposição. Traga apenas a sua vontade de evoluir.
+        </p>
+      </div>
+
+      <!-- CARROSSEL NO MOBILE / GRID NO DESKTOP -->
+      <div id="inclusive-carousel" class="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth pb-4 md:pb-0">
+        
+        <div class="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center rounded-2xl overflow-hidden aspect-square vip-border relative group">
+          <img src="assets/hero-fachada.png" alt="Instituto Figueiredo" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        </div>
+        
+        <div class="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center rounded-2xl overflow-hidden aspect-square vip-border relative group md:col-span-2 md:row-span-2">
+          <img src="assets/instituto3.JPG" alt="Tecnologia Clínica" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        </div>
+        
+        <div class="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center rounded-2xl overflow-hidden aspect-square vip-border relative group">
+          <img src="assets/instituto1.JPG" alt="Instrumentais Premium" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        </div>
+        
+        <div class="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center rounded-2xl overflow-hidden aspect-square vip-border relative group">
+          <img src="assets/instituto2.JPG" alt="Salas de Atendimento" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        </div>
+        
+        <div class="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center rounded-2xl overflow-hidden aspect-square vip-border relative group">
+          <img src="assets/instituto4.JPG" alt="Detalhes Clínicos" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORES (FOTOS, BOTOES INSTAGRAM E SELOS) -->
+  <section class="py-24 px-4 sm:px-6 relative border-t border-white/5">
+    <div class="mx-auto max-w-7xl grid lg:grid-cols-2 gap-14 items-center">
+      
+      <!-- CARROSSEL DE FOTOS MENTORES -->
+      <div class="relative vip-glow order-2 lg:order-1">
+        <div class="relative rounded-3xl overflow-hidden vip-border p-1">
+          <div class="rounded-2xl overflow-hidden relative aspect-[4/5]" id="mentor-carousel">
+            <img src="assets/mentores1.jpeg" alt="Mentores Slide 1" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100" />
+            <img src="assets/mentores2.jpeg" alt="Mentores Slide 2" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+            <img src="assets/mentores3.jpeg" alt="Mentores Slide 3" class="mentor-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+            
+            <!-- Controles do Carrossel -->
+            <div class="absolute inset-x-0 bottom-4 flex justify-center gap-2 z-10">
+              <button onclick="setMentorSlide(0)" class="mentor-dot h-2 w-6 rounded-full bg-vip transition-all"></button>
+              <button onclick="setMentorSlide(1)" class="mentor-dot h-2 w-2 rounded-full bg-white/40 transition-all"></button>
+              <button onclick="setMentorSlide(2)" class="mentor-dot h-2 w-2 rounded-full bg-white/40 transition-all"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFORMAÇÕES, INSTAGRAMS E SELOS -->
+      <div class="order-1 lg:order-2">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">Acesso 1 a 1</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Lado a lado com <br><span class="vip-text">Breno ou Ramon</span> Figueiredo
+        </h2>
+        
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://www.instagram.com/drbrenofigueiredo/" target="_blank" rel="noopener noreferrer" class="glass-obsidian rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-vip hover:border-vip/60 transition inline-flex items-center gap-2">
+            <i data-lucide="instagram" class="h-4 w-4"></i> Dr. Breno
+          </a>
+          <a href="https://www.instagram.com/drfigueiredoramon/" target="_blank" rel="noopener noreferrer" class="glass-obsidian rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-vip hover:border-vip/60 transition inline-flex items-center gap-2">
+            <i data-lucide="instagram" class="h-4 w-4"></i> Dr. Ramon
+          </a>
+        </div>
+
+        <p class="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Mais do que professores, somos dentistas que vivem a clínica diária de alta estética. No formato VIP, toda a nossa atenção, macetes e correções de postura são direcionadas exclusivamente para você durante o atendimento.
+        </p>
+
+        <!-- SELOS DE AUTORIDADE -->
+        <div class="mt-8 grid grid-cols-2 gap-3">
+          <div class="glass-obsidian rounded-xl p-3 flex items-center gap-3 border-vip/20">
+            <i data-lucide="award" class="h-5 w-5 text-vip shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Sorriso mais bonito Miss Universo</span>
+          </div>
+          <div class="glass-obsidian rounded-xl p-3 flex items-center gap-3 border-vip/20">
+            <i data-lucide="badge-check" class="h-5 w-5 text-vip shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Partner PHS</span>
+          </div>
+          <div class="glass-obsidian rounded-xl p-3 flex items-center gap-3 border-vip/20">
+            <i data-lucide="badge-check" class="h-5 w-5 text-vip shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Partner DHpro</span>
+          </div>
+          <div class="glass-obsidian rounded-xl p-3 flex items-center gap-3 border-vip/20">
+            <i data-lucide="mic" class="h-5 w-5 text-vip shrink-0"></i>
+            <span class="text-xs font-semibold leading-tight">Palestrante CIOSP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (3 SHORTS - CARROSSEL MOBILE) -->
+  <section class="py-24 sm:py-32 px-4 sm:px-6 relative border-t border-white/5">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-14">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">Experiências Reais</span>
+          <span class="h-px w-8 bg-vip/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Ouça quem já viveu a <span class="vip-text">Imersão VIP</span>
+        </h2>
+      </div>
+
+      <!-- 3 Vídeos Shorts (Flex no mobile + snap, Grid no desktop) -->
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0 max-w-5xl mx-auto">
+        <!-- Shorts 1 -->
+        <div class="shrink-0 w-[80vw] md:w-auto snap-center">
+          <div class="relative aspect-[9/16] rounded-3xl overflow-hidden vip-border shadow-2xl">
+            <iframe 
+              src="https://www.youtube.com/embed/jIpREbhl0yA"
+              title="Depoimento Aluno 1" 
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Shorts 2 -->
+        <div class="shrink-0 w-[80vw] md:w-auto snap-center">
+          <div class="relative aspect-[9/16] rounded-3xl overflow-hidden vip-border shadow-2xl">
+            <iframe 
+              src="https://www.youtube.com/embed/tcFYf4SFqRM" 
+              title="Depoimento Aluno 2" 
+              class="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA E APLICAÇÃO VIP -->
+  <section id="oferta" class="py-24 px-4 sm:px-6 relative">
+    <div class="mx-auto max-w-4xl relative vip-glow">
+      <div class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-[#FAD0B4]/30 via-[#E6A87C]/15 to-[#B77B66]/30 blur-2xl opacity-70"></div>
+      
+      <div class="relative rounded-[2.5rem] glass-strong vip-border p-8 sm:p-14 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full bg-vip/10 border border-vip/30 px-5 py-2 text-xs font-bold text-vip uppercase tracking-widest mb-6">
+          <i data-lucide="crown" class="h-3.5 w-3.5"></i> Investimento Imersão Individual
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-bold leading-tight">
+          Acesso Total ao <span class="vip-text">Protocolo Clínico Figueiredo</span>
+        </h2>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-5 text-left">
+          <div class="rounded-2xl bg-white/[0.02] border border-white/10 p-6">
+            <div class="text-xs uppercase tracking-widest text-vip mb-1 font-bold">Pagamento Facilitado</div>
+            <div class="text-3xl font-bold">R$ 9.500,00</div>
+            <p class="text-xs text-muted-foreground mt-2">Em até <strong class="vip-text">12x sem juros</strong> no cartão de crédito.</p>
+          </div>
+
+          <div class="rounded-2xl bg-white/[0.02] border border-white/10 p-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-vip/10 to-transparent"></div>
+            <div class="relative">
+              <div class="text-xs uppercase tracking-widest text-vip mb-1 font-bold">Condição à Vista</div>
+              <div class="text-3xl font-bold">R$ 8.000,00</div>
+              <p class="text-xs text-muted-foreground mt-2">Garantia e agendamento de data via <strong class="text-foreground">PIX</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="https://wa.me/553196486833?text=Olá!%20Tenho%20interesse%20em%20agendar%20minha%20data%20para%20o%20curso%20Resina%20Composta%20VIP%20(100%%20Prático)." target="_blank" rel="noopener noreferrer" class="btn-vip w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full px-10 py-5 text-sm sm:text-base uppercase tracking-wider transition">
+            CONSULTAR DATAS DISPONÍVEIS
+            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          </a>
+        </div>
+
+        <p class="text-xs text-muted-foreground mt-6">
+          *A data é definida diretamente com a equipe técnica de acordo com a disponibilidade da agenda do Instituto.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: A SEDE (INSTITUTO FIGUEIREDO - IPATINGA/MG) -->
+  <section class="py-24 px-4 sm:px-6 relative border-t border-white/5">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-12">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">A Sede</span>
+          <span class="h-px w-8 bg-vip/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Sua imersão será no <span class="vip-text">coração do Instituto Figueiredo</span>
+        </h2>
+      </div>
+
+      <!-- Vídeo no formato Shorts (Vertical 9:16) -->
+      <div class="max-w-sm mx-auto mb-10">
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden vip-border vip-glow shadow-2xl">
+          <iframe 
+            src="https://www.youtube.com/embed/V2yUSniTn38" 
+            title="Instituto Figueiredo - Ipatinga/MG" 
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="glass-strong rounded-3xl p-8 flex flex-col md:flex-row items-start md:items-center gap-4 max-w-4xl mx-auto border-vip/20">
+        <div class="h-12 w-12 rounded-2xl bg-vip/15 border border-vip/30 grid place-items-center shrink-0">
+          <i data-lucide="map-pin" class="h-5 w-5 text-vip"></i>
+        </div>
+        <p class="text-base sm:text-lg text-foreground/90">
+          Estamos em <strong>Ipatinga / MG</strong> — apenas 220 km de Belo Horizonte, com fácil acesso pelas principais rodovias e pelo <strong>Aeroporto Regional do Vale do Aço</strong>.
+        </p>
+      </div>
+
+      <!-- HOTÉIS RECOMENDADOS -->
+      <div class="mt-10 max-w-5xl mx-auto">
+        <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+          <i data-lucide="hotel" class="h-5 w-5 text-vip"></i> Hospedagem recomendada
+        </h3>
+        
+        <div class="flex md:grid md:grid-cols-3 gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+          <!-- 1º: STEEL VALLEY HOTEL -->
+          <div class="glass-strong rounded-2xl p-6 vip-border vip-glow relative border-vip/60 shrink-0 w-[85vw] md:w-auto snap-center">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-lg font-bold text-vip">Steel Valley Hotel</h4>
+              <span class="text-[10px] uppercase tracking-widest text-[#050505] bg-vip font-bold rounded-full px-2.5 py-1">
+                📍 200m (3 min a pé)
+              </span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              A opção mais próxima do Instituto Figueiredo (apenas 200 metros). Praticidade total para ir a pé.
+            </p>
+          </div>
+
+          <!-- 2º: SAN DIEGO SUITES -->
+          <div class="glass-obsidian rounded-2xl p-6 hover:border-vip/30 transition shrink-0 w-[85vw] md:w-auto snap-center">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-lg font-bold">San Diego Suites</h4>
+              <span class="text-[10px] uppercase tracking-widest text-vip border border-vip/40 rounded-full px-2.5 py-1">
+                Premium
+              </span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              Estrutura de altíssimo nível, conforto superior e excelente gastronomia.
+            </p>
+          </div>
+
+          <!-- 3º: PANORAMA TOWER -->
+          <div class="glass-obsidian rounded-2xl p-6 hover:border-vip/30 transition shrink-0 w-[85vw] md:w-auto snap-center">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-lg font-bold">Panorama Tower Hotel</h4>
+              <span class="text-[10px] uppercase tracking-widest text-vip border border-vip/40 rounded-full px-2.5 py-1">
+                Conforto & Estrutura
+              </span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              Excelente estrutura e comodidade para descansar após o dia intenso de imersão.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: OUTROS CURSOS / ESTEIRA DE PRODUTOS (VIP) -->
+  <section class="py-24 px-4 sm:px-6 relative border-t border-white/10">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mx-auto max-w-3xl mb-14">
+        <div class="justify-center flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-vip/60"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-vip">Outras Opções</span>
+          <span class="h-px w-8 bg-vip/60"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Esse curso não é para você? <span class="vip-text">Conheça nossas outras imersões!</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          Temos treinamentos desenhados para cada momento da sua jornada profissional na odontologia estética.
+        </p>
+      </div>
+
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 md:pb-0 max-w-6xl mx-auto">
+        
+        <!-- CARD 1: ESSENTIAL -->
+        <div class="glass-strong rounded-3xl overflow-hidden vip-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/hero-fachada.png" alt="Resina Composta Essential" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/Breno-ramon-1.png'" />
+            <div class="absolute top-3 left-3 bg-vip text-[#050505] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              2 Dias · Em Turma
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Resina Composta <span class="vip-text">Essential</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                A imersão presencial de 2 dias criada para acadêmicos e recém-formados dominarem um protocolo simples, previsível e lucrativo.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="index.html" class="w-full glass-obsidian rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-vip hover:bg-vip hover:text-[#050505] transition flex items-center justify-center gap-2">
+                Conhecer Essential <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: PLATINUM -->
+        <div class="glass-strong rounded-3xl overflow-hidden vip-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/platinum.png" alt="Resina Composta Platinum" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/mentores1.jpeg'" />
+            <div class="absolute top-3 left-3 bg-vip text-[#050505] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              3 Dias · Avançado
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Resina Composta <span class="vip-text">Platinum</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                O passo seguinte para dentistas experientes. Domine estratificação avançada, anatomia e texturização de elite para elevar seu ticket.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="index-platinum.html" class="w-full glass-obsidian rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-vip hover:bg-vip hover:text-[#050505] transition flex items-center justify-center gap-2">
+                Conhecer Platinum <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: LAMINADOS CERÂMICOS VIP -->
+        <div class="glass-strong rounded-3xl overflow-hidden vip-border flex flex-col shrink-0 w-[82vw] md:w-auto snap-center group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="assets/laminados.jpeg" alt="Laminados Cerâmicos VIP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='assets/caso-2.jpeg'" />
+            <div class="absolute top-3 left-3 bg-vip text-[#050505] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+              4 Dias · Porcelana & Lentes
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Laminados <span class="vip-text">Cerâmicos VIP</span></h3>
+              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Domine o universo das lentes de contato e facetas de porcelana. Um protocolo completo de 4 dias — do preparo à cimentação.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <a href="index-laminados.html" class="w-full glass-obsidian rounded-full py-2.5 px-4 text-xs font-bold uppercase tracking-wider text-vip hover:bg-vip hover:text-[#050505] transition flex items-center justify-center gap-2">
+                Conhecer Laminados <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 mt-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="h-9 w-9 rounded-full bg-gradient-to-br from-[#FAD0B4] to-[#E6A87C] grid place-items-center text-[#050505] font-black">F</span>
+        <div>
+          <div class="font-display font-bold">Figueiredo <span class="vip-text">Academy</span></div>
+          <div class="text-xs text-muted-foreground">High Performance Dental Training</div>
+        </div>
+      </div>
+      <div class="text-xs text-muted-foreground text-center md:text-right">
+        © <span id="year"></span> Figueiredo Academy. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+
+    // Carrossel dos Mentores
+    let currentMentorSlide = 0;
+    const slides = document.querySelectorAll('.mentor-slide');
+    const dots = document.querySelectorAll('.mentor-dot');
+
+    function setMentorSlide(index) {
+      if(slides.length === 0) return;
+      slides[currentMentorSlide].classList.remove('opacity-100');
+      slides[currentMentorSlide].classList.add('opacity-0');
+      dots[currentMentorSlide].classList.remove('bg-vip', 'w-6');
+      dots[currentMentorSlide].classList.add('bg-white/40', 'w-2');
+
+      currentMentorSlide = index;
+
+      slides[currentMentorSlide].classList.remove('opacity-0');
+      slides[currentMentorSlide].classList.add('opacity-100');
+      dots[currentMentorSlide].classList.remove('bg-white/40', 'w-2');
+      dots[currentMentorSlide].classList.add('bg-vip', 'w-6');
+    }
+
+    if(slides.length > 0) {
+      setInterval(() => {
+        let nextSlide = (currentMentorSlide + 1) % slides.length;
+        setMentorSlide(nextSlide);
+      }, 4000);
+    }
+
+    // Carrossel Automático (Estrutura do Instituto) - Apenas Mobile
+    const inclusiveCarousel = document.getElementById('inclusive-carousel');
+    let autoScrollInterval;
+
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(() => {
+        if (window.innerWidth < 768 && inclusiveCarousel) {
+          // Se chegou no final (com uma margem de erro de 10px), volta pro começo
+          if (inclusiveCarousel.scrollLeft + inclusiveCarousel.clientWidth >= inclusiveCarousel.scrollWidth - 10) {
+            inclusiveCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            // Avança aproximadamente a largura de um card (85vw)
+            inclusiveCarousel.scrollBy({ left: inclusiveCarousel.clientWidth * 0.85, behavior: 'smooth' });
+          }
+        }
+      }, 3500); // a cada 3.5 segundos
+    }
+
+    if (inclusiveCarousel) {
+      startAutoScroll();
+      
+      // Pausa ao tocar/arrastar com o dedo
+      inclusiveCarousel.addEventListener('touchstart', () => {
+        clearInterval(autoScrollInterval);
+      }, { passive: true });
+
+      // Retoma o automático após soltar
+      inclusiveCarousel.addEventListener('touchend', () => {
+        startAutoScroll();
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
